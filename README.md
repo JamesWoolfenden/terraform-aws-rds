@@ -10,7 +10,6 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
 
-
 Include this repository as a module in your existing terraform code:
 
 ```terraform
@@ -26,16 +25,10 @@ module rds {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| currency | Name of the currency the budget is in | string | n/a | yes |
-| limit | Budget alarm limit | number | n/a | yes |
-| time\_period\_start | Time to start | string | n/a | yes |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| ec2\_budget | hashicorp required |
-| ec2\_half\_budget |  |
+| common\_tags | This is to help you add tags to your cloud objects | map | n/a | yes |
+| instance |  | map | n/a | yes |
+| subnet\_group |  | list | `[ { "description": "", "name_prefix": "jgw" } ]` | no |
+| subnet\_ids |  | list | n/a | yes |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
