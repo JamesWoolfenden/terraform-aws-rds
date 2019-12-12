@@ -1,6 +1,6 @@
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-rds [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-rds.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-rds) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-rds.svg)](https://github.com/JamesWoolfenden/terraform-aws-rds/releases/latest)
+# terraform-aws-rds [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-rds/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-rds) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-rds.svg)](https://github.com/JamesWoolfenden/terraform-aws-rds/releases/latest)
 
 Terraform module - creates an RDS instance.
 
@@ -14,9 +14,12 @@ Include this repository as a module in your existing terraform code:
 
 ```terraform
 module rds {
-  source          = "JamesWoolfenden/budget/aws"
-  version         = "0.0.1"
-  common_tags     = var.common_tags
+  source            = "JamesWoolfenden/budget/aws"
+  version           = "0.0.4"
+  common_tags       = var.common_tags
+  subnet_ids        = var.subnets
+  instance          = var.instance
+  instance_password = "Password123"
 }
 ```
 
@@ -60,7 +63,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright � 2019-2019 [Slalom, LLC](https://slalom.com)
+Copyright © 2019-2019 [Slalom, LLC](https://slalom.com)
 
 ## License
 
