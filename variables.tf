@@ -18,3 +18,7 @@ variable "subnet_group" {
       description = ""
   }]
 }
+
+variable "instance_password" {
+
+}

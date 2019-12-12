@@ -27,8 +27,16 @@ module rds {
 |------|-------------|:----:|:-----:|:-----:|
 | common\_tags | This is to help you add tags to your cloud objects | map | n/a | yes |
 | instance |  | map | n/a | yes |
+| instance\_password |  | string | n/a | yes |
 | subnet\_group |  | list | `[ { "description": "", "name_prefix": "jgw" } ]` | no |
 | subnet\_ids |  | list | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| instance |  |
+| security\_group | Required for to publish Modules |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
