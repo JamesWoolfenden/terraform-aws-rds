@@ -4,5 +4,10 @@ variable "common_tags" {
 }
 
 variable "instance" {
-  type = map
+  description = "The DB instance details"
+  type        = map
+}
+
+variable "subnet_group" {
+  description = "List of Subnets and names prefix"
 }

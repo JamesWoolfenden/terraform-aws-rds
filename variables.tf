@@ -22,3 +22,9 @@ variable "subnet_group" {
 variable "instance_password" {
 
 }
+
+variable "db_subnet_group_name" {
+  default     = "default"
+  type        = string
+  description = "The name of the subnet to use for the database"
+}

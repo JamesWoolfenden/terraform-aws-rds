@@ -29,6 +29,7 @@ module rds {
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | common\_tags | This is to help you add tags to your cloud objects | map | n/a | yes |
+| db\_subnet\_group\_name | The name of the subnet to use for the database | string | `"default"` | no |
 | instance |  | map | n/a | yes |
 | instance\_password |  | string | n/a | yes |
 | subnet\_group |  | list | `[ { "description": "", "name_prefix": "jgw" } ]` | no |

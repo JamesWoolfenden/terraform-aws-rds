@@ -4,4 +4,5 @@ module rds {
   subnet_ids        = [""]
   instance          = var.instance
   instance_password = "Password123"
+  subnet_group      = var.subnet_group
 }
