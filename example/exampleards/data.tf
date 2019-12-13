@@ -7,3 +7,11 @@ data "aws_subnet_ids" "private" {
 
 
 data "aws_vpcs" "main" {}
+
+data "aws_iam_role" "rds" {
+  name = "rds-monitoring-role"
+}
+
+data "aws_kms_key" "rds" {
+  key_id = "alias/rds"
+}

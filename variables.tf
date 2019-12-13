@@ -27,3 +27,14 @@ variable "db_subnet_group_name" {
   type        = string
   description = "The name of the subnet to use for the database"
 }
+
+variable "rds_role" {
+  description = "The IAM ARN of the role for RDS monitoring"
+  type        = string
+  default     = ""
+}
+
+variable "kms_key_id" {
+  description = "The ARN of the KMS key"
+  default     = ""
+}

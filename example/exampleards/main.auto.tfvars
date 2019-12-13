@@ -33,7 +33,7 @@ instance = {
   skip_final_snapshot                   = true
   storage_encrypted                     = true
   storage_type                          = "gp2"
-  username                              = "dbgeezer"  
+  username                              = "dbgeezer"
 }
 
 subnet_group = [{
