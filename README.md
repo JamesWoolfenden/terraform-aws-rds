@@ -10,12 +10,12 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
 
-Include this repository as a module in your existing terraform code:
+Include this repository as a module in your existing Terraform code:
 
 ```terraform
-module rds {
-  source            = "JamesWoolfenden/budget/aws"
-  version           = "0.0.4"
+module "rds" {
+  source            = "JamesWoolfenden/rds/aws"
+  version           = "0.0.5"
   common_tags       = var.common_tags
   subnet_ids        = var.subnets
   instance          = var.instance
