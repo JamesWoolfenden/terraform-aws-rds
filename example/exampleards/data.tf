@@ -13,5 +13,5 @@ data "aws_iam_role" "rds" {
 }
 
 data "aws_kms_key" "rds" {
-  key_id = "alias/rds"
+  key_id = "alias/aws/rds"
 }

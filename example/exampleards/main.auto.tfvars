@@ -20,7 +20,6 @@ instance = {
   maintenance_window                    = "thu:06:15-thu:06:45"
   max_allocated_storage                 = 1000
   monitoring_interval                   = 60
-  monitoring_role_arn                   = "arn:aws:iam::151017656270:role/rds-monitoring-role"
   multi_az                              = false
   name                                  = "contoso"
   option_group_name                     = "default:postgres-11"
