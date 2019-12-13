@@ -8,7 +8,6 @@ variable "subnet_ids" {
 }
 
 variable "instance" {
-  type = map
 }
 
 variable "subnet_group" {

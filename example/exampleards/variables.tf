@@ -5,7 +5,6 @@ variable "common_tags" {
 
 variable "instance" {
   description = "The DB instance details"
-  type        = map
 }
 
 variable "subnet_group" {
