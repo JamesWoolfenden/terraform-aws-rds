@@ -32,6 +32,7 @@ instance = {
   skip_final_snapshot                   = true
   storage_encrypted                     = true
   storage_type                          = "gp2"
+  snapshot_identifier                   = ""
   username                              = "dbgeezer"
 }
 

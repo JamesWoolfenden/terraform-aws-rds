@@ -33,6 +33,7 @@ resource aws_db_instance instance {
   skip_final_snapshot                   = var.instance["skip_final_snapshot"]
   storage_encrypted                     = var.instance["storage_encrypted"]
   storage_type                          = var.instance["storage_type"]
+  snapshot_identifier                   = var.instance["snapshot_identifier"]
   tags                                  = var.common_tags
   username                              = var.instance["username"]
 }
