@@ -18,7 +18,7 @@ resource aws_db_instance instance {
   maintenance_window                    = var.instance["maintenance_window"]
   max_allocated_storage                 = var.instance["max_allocated_storage"]
   monitoring_interval                   = var.instance["monitoring_interval"]
-  monitoring_role_arn                   = var.rds_role
+  monitoring_role_arn                   = local.rds_role
   multi_az                              = var.instance["multi_az"]
   name                                  = var.instance["name"]
   option_group_name                     = var.instance["option_group_name"]
@@ -28,7 +28,7 @@ resource aws_db_instance instance {
   performance_insights_kms_key_id       = var.kms_key_id
   performance_insights_retention_period = var.instance["performance_insights_retention_period"]
   port                                  = var.instance["port"]
-  publicly_accessible                   = var.instance["publicly_accessible"]
+  publicly_accessible                   = false
   security_group_names                  = var.instance["security_group_names"]
   skip_final_snapshot                   = var.instance["skip_final_snapshot"]
   storage_encrypted                     = var.instance["storage_encrypted"]

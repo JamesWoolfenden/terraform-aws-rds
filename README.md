@@ -20,31 +20,38 @@ module "rds" {
   subnet_ids        = var.subnets
   instance          = var.instance
   instance_password = "Password123"
-  rds_role             = data.aws_iam_role.rds
-  kms_key_id           = data.aws_kms_key.rds.id
+  rds_role          = data.aws_iam_role.rds
+  kms_key_id        = data.aws_kms_key.rds.id
 }
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| common\_tags | This is to help you add tags to your cloud objects | map | n/a | yes |
-| db\_subnet\_group\_name | The name of the subnet to use for the database | string | `"default"` | no |
-| instance |  | string | n/a | yes |
-| instance\_password |  | string | n/a | yes |
-| kms\_key\_id | The ARN of the KMS key | string | `""` | no |
-| rds\_role | The IAM ARN of the role for RDS monitoring | string | `""` | no |
-| subnet\_group |  | list | `[ { "description": "", "name_prefix": "jgw" } ]` | no |
-| subnet\_ids |  | list | n/a | yes |
+|------|-------------|------|---------|:-----:|
+| common\_tags | This is to help you add tags to your cloud objects | `map` | n/a | yes |
+| db\_subnet\_group\_name | The name of the subnet to use for the database | `string` | `"default"` | no |
+| instance | n/a | `any` | n/a | yes |
+| instance\_password | n/a | `any` | n/a | yes |
+| kms\_key\_id | The ARN of the KMS key | `string` | `"aws/rds"` | no |
+| publicly\_accessible | To comply with security rules CKV\_AWS\_17 this defaults to false | `bool` | `false` | no |
+| rds\_role | The IAM ARN of the role for RDS monitoring | `string` | `""` | no |
+| subnet\_group | n/a | `list` | <pre>[<br>  {<br>    "description": "",<br>    "name_prefix": "jgw"<br>  }<br>]<br></pre> | no |
+| subnet\_ids | A list of Subnet ids | `list` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| instance |  |
-| security\_group | Required for to publish Modules |
+| instance | n/a |
+| security\_group | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 

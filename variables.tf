@@ -4,7 +4,8 @@ variable "common_tags" {
 }
 
 variable "subnet_ids" {
-  type = list
+  description = "A list of Subnet ids"
+  type        = list
 }
 
 variable "instance" {
@@ -19,7 +20,6 @@ variable "subnet_group" {
 }
 
 variable "instance_password" {
-
 }
 
 variable "db_subnet_group_name" {
@@ -36,5 +36,11 @@ variable "rds_role" {
 
 variable "kms_key_id" {
   description = "The ARN of the KMS key"
-  default     = ""
+  default     = "aws/rds"
+}
+
+variable "publicly_accessible" {
+  type        = bool
+  description = "To comply with security rules CKV_AWS_17 this defaults to false"
+  default     = false
 }
