@@ -1,6 +1,4 @@
 ---
-default_language_version:
-    python: python3.7
 repos:
   - repo: git://github.com/pre-commit/pre-commit-hooks
     rev: v2.5.0
@@ -49,7 +47,8 @@ repos:
       - id: prettier
         exclude_types: [markdown]
   - repo: git://github.com/JamesWoolfenden/pre-commit-terraform-fmt
-    rev: 0.0.12
+    rev: 0.0.17
     hooks:
-      - id: checkov
+      - id: checkov-scan
+        language_version: python3.7
         files: \.tf$
