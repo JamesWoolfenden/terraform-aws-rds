@@ -49,7 +49,7 @@ repos:
       - id: prettier
         exclude_types: [markdown]
   - repo: git://github.com/JamesWoolfenden/pre-commit-terraform-fmt
-    rev: 0.0.12
+    rev: 0.0.18
     hooks:
-      - id: checkov
+      - id: checkov-scan
         files: \.tf$
