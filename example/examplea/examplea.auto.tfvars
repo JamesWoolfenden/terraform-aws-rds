@@ -12,7 +12,7 @@ instance = {
   engine_version       = ""
   engine               = "mysql"
   allocated_storage    = 20
-  snapshot_identifier                   = ""
+  snapshot_identifier  = ""
 }
 default = [
   {
