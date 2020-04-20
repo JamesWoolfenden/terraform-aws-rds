@@ -42,3 +42,9 @@ variable "publicly_accessible" {
   description = "To comply with security rules CKV_AWS_17 this defaults to false"
   default     = false
 }
+
+variable "storage_encrypted" {
+  description = "Encryption status"
+  type        = bool
+  default     = true
+}

@@ -47,6 +47,7 @@ module "rds" {
 | instance\_password | n/a | `string` | n/a | yes |
 | publicly\_accessible | To comply with security rules CKV\_AWS\_17 this defaults to false | `bool` | `false` | no |
 | rds\_role | The IAM ARN of the role for RDS monitoring | `string` | `""` | no |
+| storage\_encrypted | Encryption status | `bool` | `true` | no |
 | subnet\_group | n/a | `list` | <pre>[<br>  {<br>    "description": "",<br>    "name": "database-1",<br>    "name_prefix": null<br>  }<br>]</pre> | no |
 | subnet\_ids | A list of Subnet ids | `list` | n/a | yes |
 
