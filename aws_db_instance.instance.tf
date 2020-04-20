@@ -14,7 +14,7 @@ resource aws_db_instance instance {
   instance_class                      = var.instance["instance_class"]
   iops                                = var.instance["iops"]
   #checkov:skip=CKV_AWS_16: "Ensure all data stored in the RDS is securely encrypted at rest"
-  kms_key_id                            = data.aws_kms_key.rds.arn
+  kms_key_id                            = var.storage_encrypted ? data.aws_kms_key.rds.arn : null
   license_model                         = var.instance["license_model"]
   maintenance_window                    = var.instance["maintenance_window"]
   max_allocated_storage                 = var.instance["max_allocated_storage"]

@@ -6,4 +6,5 @@ module "rds-mssql" {
   instance          = var.instance
   instance_password = "Password123"
   subnet_group      = var.subnet_group
+  storage_encrypted = false
 }
