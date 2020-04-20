@@ -29,7 +29,6 @@ instance = {
   security_group_names                  = null
   skip_final_snapshot                   = true
   snapshot_identifier                   = ""
-  storage_encrypted                     = false
   storage_type                          = ""
   timezone                              = "Central Standard Time"
   username                              = "admin"

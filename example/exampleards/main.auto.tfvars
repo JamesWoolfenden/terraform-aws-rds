@@ -30,7 +30,6 @@ instance = {
   publicly_accessible                   = false
   security_group_names                  = []
   skip_final_snapshot                   = true
-  storage_encrypted                     = true
   storage_type                          = "gp2"
   snapshot_identifier                   = ""
   username                              = "dbgeezer"

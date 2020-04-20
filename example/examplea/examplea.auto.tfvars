@@ -14,8 +14,3 @@ instance = {
   allocated_storage    = 20
   snapshot_identifier  = ""
 }
-default = [
-  {
-    name_prefix = "jgw"
-    description = ""
-}]
