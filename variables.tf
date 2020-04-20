@@ -9,17 +9,20 @@ variable "subnet_ids" {
 }
 
 variable "instance" {
+  description = "Map of all the variables"
 }
 
 variable "subnet_group" {
   default = [
     {
-      name_prefix = "jgw"
+      name        = "database-1"
+      name_prefix = null
       description = ""
   }]
 }
 
 variable "instance_password" {
+  type = string
 }
 
 variable "db_subnet_group_name" {
@@ -32,11 +35,6 @@ variable "rds_role" {
   description = "The IAM ARN of the role for RDS monitoring"
   type        = string
   default     = ""
-}
-
-variable "kms_key_id" {
-  description = "The ARN of the KMS key"
-  default     = "aws/rds"
 }
 
 variable "publicly_accessible" {

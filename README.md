@@ -43,20 +43,19 @@ module "rds" {
 |------|-------------|------|---------|:-----:|
 | common\_tags | This is to help you add tags to your cloud objects | `map` | n/a | yes |
 | db\_subnet\_group\_name | The name of the subnet to use for the database | `string` | `"default"` | no |
-| instance | n/a | `any` | n/a | yes |
-| instance\_password | n/a | `any` | n/a | yes |
-| kms\_key\_id | The ARN of the KMS key | `string` | `"aws/rds"` | no |
+| instance | Map of all the variables | `any` | n/a | yes |
+| instance\_password | n/a | `string` | n/a | yes |
 | publicly\_accessible | To comply with security rules CKV\_AWS\_17 this defaults to false | `bool` | `false` | no |
 | rds\_role | The IAM ARN of the role for RDS monitoring | `string` | `""` | no |
-| subnet\_group | n/a | `list` | <pre>[<br>  {<br>    "description": "",<br>    "name_prefix": "jgw"<br>  }<br>]<br></pre> | no |
+| subnet\_group | n/a | `list` | <pre>[<br>  {<br>    "description": "",<br>    "name": "database-1",<br>    "name_prefix": null<br>  }<br>]</pre> | no |
 | subnet\_ids | A list of Subnet ids | `list` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
+| db\_subnet\_group | n/a |
 | instance | n/a |
-| security\_group | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
