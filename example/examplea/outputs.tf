@@ -1,7 +1,7 @@
-output "security_group" {
-  value = module.rds.security_group
+output "db_subnet_group" {
+  value = module.rds-mssql.db_subnet_group
 }
 
 output "instance" {
-  value = module.rds.instance
+  value = module.rds-mssql.instance
 }
