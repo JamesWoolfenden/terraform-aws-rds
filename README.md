@@ -31,33 +31,7 @@ module "rds" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Providers
-
-| Name | Version |
-|------|---------|
-| aws | n/a |
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
-| common\_tags | This is to help you add tags to your cloud objects | `map` | n/a | yes |
-| db\_subnet\_group\_name | The name of the subnet to use for the database | `string` | `"default"` | no |
-| instance | Map of all the variables | `any` | n/a | yes |
-| instance\_password | n/a | `string` | n/a | yes |
-| publicly\_accessible | To comply with security rules CKV\_AWS\_17 this defaults to false | `bool` | `false` | no |
-| rds\_role | The IAM ARN of the role for RDS monitoring | `string` | `""` | no |
-| storage\_encrypted | Encryption status | `bool` | `true` | no |
-| subnet\_group | n/a | `list` | <pre>[<br>  {<br>    "description": "",<br>    "name": "database-1",<br>    "name_prefix": null<br>  }<br>]</pre> | no |
-| subnet\_ids | A list of Subnet ids | `list` | n/a | yes |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| db\_subnet\_group | n/a |
-| instance | n/a |
-
+Error: no lines in file
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
@@ -114,8 +88,8 @@ under the License.
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
-[linkedin]: https://www.linkedin.com/company/slalom-consulting/
-[twitter]: https://twitter.com/Slalom
+[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
+[twitter]: https://twitter.com/JimWoolfenden
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-rds&url=https://github.com/JamesWoolfenden/terraform-aws-rds
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-rds&url=https://github.com/JamesWoolfenden/terraform-aws-rds
 [share_reddit]: https://reddit.com/submit/?url=https://github.com/JamesWoolfenden/terraform-aws-rds

@@ -1,5 +1,5 @@
 provider "aws" {
-  version = "2.41.0"
+  version = "2.68.0"
 }
 
 provider "random" {
