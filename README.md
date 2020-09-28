@@ -29,7 +29,6 @@ module "rds" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
@@ -37,29 +36,29 @@ No requirements.
 ## Providers
 
 | Name | Version |
-| ---- | ------- |
-| aws  | n/a     |
+|------|---------|
+| aws | n/a |
 
 ## Inputs
 
-| Name                 | Description                                                     | Type     | Default                                                                                                | Required |
-| -------------------- | --------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------ | :------: |
-| common_tags          | This is to help you add tags to your cloud objects              | `map`    | n/a                                                                                                    |   yes    |
-| db_subnet_group_name | The name of the subnet to use for the database                  | `string` | `"default"`                                                                                            |    no    |
-| instance             | Map of all the variables                                        | `any`    | n/a                                                                                                    |   yes    |
-| instance_password    | n/a                                                             | `string` | n/a                                                                                                    |   yes    |
-| publicly_accessible  | To comply with security rules CKV_AWS_17 this defaults to false | `bool`   | `false`                                                                                                |    no    |
-| rds_role             | The IAM ARN of the role for RDS monitoring                      | `string` | `""`                                                                                                   |    no    |
-| storage_encrypted    | Encryption status                                               | `bool`   | `true`                                                                                                 |    no    |
-| subnet_group         | n/a                                                             | `list`   | <pre>[<br> {<br> "description": "",<br> "name": "database-1",<br> "name_prefix": null<br> }<br>]</pre> |    no    |
-| subnet_ids           | A list of Subnet ids                                            | `list`   | n/a                                                                                                    |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| common\_tags | This is to help you add tags to your cloud objects | `map` | n/a | yes |
+| db\_subnet\_group\_name | The name of the subnet to use for the database | `string` | `"default"` | no |
+| instance | Map of all the variables | `any` | n/a | yes |
+| instance\_password | n/a | `string` | n/a | yes |
+| publicly\_accessible | To comply with security rules CKV\_AWS\_17 this defaults to false | `bool` | `false` | no |
+| rds\_role | The IAM ARN of the role for RDS monitoring | `string` | `""` | no |
+| storage\_encrypted | Encryption status | `bool` | `true` | no |
+| subnet\_group | n/a | `list` | <pre>[<br>  {<br>    "description": "",<br>    "name": "database-1",<br>    "name_prefix": null<br>  }<br>]</pre> | no |
+| subnet\_ids | A list of Subnet ids | `list` | n/a | yes |
 
 ## Outputs
 
-| Name            | Description |
-| --------------- | ----------- |
-| db_subnet_group | n/a         |
-| instance        | n/a         |
+| Name | Description |
+|------|-------------|
+| db\_subnet\_group | n/a |
+| instance | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
