@@ -1,5 +1,3 @@
-[![Slalom][logo]](https://slalom.com)
-
 # terraform-aws-rds
 
 [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-rds/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-rds)
@@ -31,6 +29,7 @@ module "rds" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
@@ -38,29 +37,29 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
-| aws | n/a |
+| ---- | ------- |
+| aws  | n/a     |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| common\_tags | This is to help you add tags to your cloud objects | `map` | n/a | yes |
-| db\_subnet\_group\_name | The name of the subnet to use for the database | `string` | `"default"` | no |
-| instance | Map of all the variables | `any` | n/a | yes |
-| instance\_password | n/a | `string` | n/a | yes |
-| publicly\_accessible | To comply with security rules CKV\_AWS\_17 this defaults to false | `bool` | `false` | no |
-| rds\_role | The IAM ARN of the role for RDS monitoring | `string` | `""` | no |
-| storage\_encrypted | Encryption status | `bool` | `true` | no |
-| subnet\_group | n/a | `list` | <pre>[<br>  {<br>    "description": "",<br>    "name": "database-1",<br>    "name_prefix": null<br>  }<br>]</pre> | no |
-| subnet\_ids | A list of Subnet ids | `list` | n/a | yes |
+| Name                 | Description                                                     | Type     | Default                                                                                                | Required |
+| -------------------- | --------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------ | :------: |
+| common_tags          | This is to help you add tags to your cloud objects              | `map`    | n/a                                                                                                    |   yes    |
+| db_subnet_group_name | The name of the subnet to use for the database                  | `string` | `"default"`                                                                                            |    no    |
+| instance             | Map of all the variables                                        | `any`    | n/a                                                                                                    |   yes    |
+| instance_password    | n/a                                                             | `string` | n/a                                                                                                    |   yes    |
+| publicly_accessible  | To comply with security rules CKV_AWS_17 this defaults to false | `bool`   | `false`                                                                                                |    no    |
+| rds_role             | The IAM ARN of the role for RDS monitoring                      | `string` | `""`                                                                                                   |    no    |
+| storage_encrypted    | Encryption status                                               | `bool`   | `true`                                                                                                 |    no    |
+| subnet_group         | n/a                                                             | `list`   | <pre>[<br> {<br> "description": "",<br> "name": "database-1",<br> "name_prefix": null<br> }<br>]</pre> |    no    |
+| subnet_ids           | A list of Subnet ids                                            | `list`   | n/a                                                                                                    |   yes    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| db\_subnet\_group | n/a |
-| instance | n/a |
+| Name            | Description |
+| --------------- | ----------- |
+| db_subnet_group | n/a         |
+| instance        | n/a         |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
@@ -84,7 +83,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
+Copyright © 2019-2020 James Woolfenden
 
 ## License
 
@@ -93,19 +92,19 @@ Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
 See [LICENSE](LICENSE) for full details.
 
 Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
+or more contributor license agreements. See the NOTICE file
 distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
+regarding copyright ownership. The ASF licenses this file
 to you under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
+with the License. You may obtain a copy of the License at
 
 <https://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
 "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
+KIND, either express or implied. See the License for the
 specific language governing permissions and limitations
 under the License.
 
@@ -115,8 +114,6 @@ under the License.
 
 [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-[logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
-[website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
 [linkedin]: https://www.linkedin.com/in/jameswoolfenden/
 [twitter]: https://twitter.com/JimWoolfenden
