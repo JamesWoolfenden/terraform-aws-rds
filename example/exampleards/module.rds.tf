@@ -1,4 +1,4 @@
-module rds {
+module "rds" {
   source               = "../../"
   common_tags          = var.common_tags
   subnet_ids           = data.aws_subnet_ids.private.ids

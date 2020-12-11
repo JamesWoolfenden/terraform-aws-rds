@@ -1,11 +1,11 @@
 variable "common_tags" {
   description = "This is to help you add tags to your cloud objects"
-  type        = map
+  type        = map(any)
 }
 
 variable "subnet_ids" {
   description = "A list of Subnet ids"
-  type        = list
+  type        = list(any)
 }
 
 variable "instance" {

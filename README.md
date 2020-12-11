@@ -43,7 +43,7 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| common\_tags | This is to help you add tags to your cloud objects | `map` | n/a | yes |
+| common\_tags | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
 | db\_subnet\_group\_name | The name of the subnet to use for the database | `string` | `"default"` | no |
 | instance | Map of all the variables | `any` | n/a | yes |
 | instance\_password | n/a | `string` | n/a | yes |
@@ -51,7 +51,7 @@ No requirements.
 | rds\_role | The IAM ARN of the role for RDS monitoring | `string` | `""` | no |
 | storage\_encrypted | Encryption status | `bool` | `true` | no |
 | subnet\_group | n/a | `list` | <pre>[<br>  {<br>    "description": "",<br>    "name": "database-1",<br>    "name_prefix": null<br>  }<br>]</pre> | no |
-| subnet\_ids | A list of Subnet ids | `list` | n/a | yes |
+| subnet\_ids | A list of Subnet ids | `list(any)` | n/a | yes |
 
 ## Outputs
 
