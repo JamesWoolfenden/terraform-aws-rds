@@ -9,9 +9,8 @@
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-rds/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-rds&benchmark=INFRASTRUCTURE+SECURITY)
 
-Terraform module - creates an RDS instance.
+Terraform module - creates an RDS instance. When you select tp create a Postgres DB, this module adds enables *pgaudit*, this is in line with Prowler and Bridgecrew AWS best practices.
 
-When you create a Postgres DB, this module adds enables pgaudit, which is in line with Prowler and Bridgecrew AWS best practices.
 ---
 
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
