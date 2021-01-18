@@ -40,7 +40,6 @@ common_tags = {
 
 subnet_group = [{
   name        = "group-1"
-  name_prefix = null
   description = "sql dbs"
 }]
 

@@ -45,12 +45,15 @@ No requirements.
 |------|-------------|------|---------|:--------:|
 | common\_tags | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
 | db\_subnet\_group\_name | The name of the subnet to use for the database | `string` | `"default"` | no |
+| description | n/a | `string` | `"Some description"` | no |
+| family | n/a | `string` | `"postgres11"` | no |
 | instance | Map of all the variables | `any` | n/a | yes |
 | instance\_password | n/a | `string` | n/a | yes |
+| monitoring\_role\_arn | Role for Monitoring - the ARN | `string` | `""` | no |
 | publicly\_accessible | To comply with security rules CKV\_AWS\_17 this defaults to false | `bool` | `false` | no |
 | rds\_role | The IAM ARN of the role for RDS monitoring | `string` | `""` | no |
 | storage\_encrypted | Encryption status | `bool` | `true` | no |
-| subnet\_group | n/a | `list` | <pre>[<br>  {<br>    "description": "",<br>    "name": "database-1",<br>    "name_prefix": null<br>  }<br>]</pre> | no |
+| subnet\_group | n/a | `list` | <pre>[<br>  {<br>    "description": "",<br>    "name": "database-1"<br>  }<br>]</pre> | no |
 | subnet\_ids | A list of Subnet ids | `list(any)` | n/a | yes |
 
 ## Outputs

@@ -18,3 +18,6 @@ lambda
 *~HEAD
 *backup
 *.bak
+.terraform.lock.hcl
+.DS_Store/
+.vscode/

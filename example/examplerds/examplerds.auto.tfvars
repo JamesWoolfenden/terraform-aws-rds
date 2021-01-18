@@ -1,11 +1,12 @@
 common_tags = {
-"createdby" = "Terraform" }
+  "createdby" = "Terraform"
+"testedby" = "Checkov" }
 
 
 instance = {
   allocated_storage                     = 20
   auto_minor_version_upgrade            = true
-  availability_zone                     = "us-west-2a"
+  availability_zone                     = "eu-west-2a"
   backup_retention_period               = 7
   backup_window                         = "07:33-08:03"
   copy_tags_to_snapshot                 = true
@@ -36,6 +37,6 @@ instance = {
 }
 
 subnet_group = [{
-  name_prefix = "jgw"
+  name        = "postgre"
   description = "postgres-group-name"
 }]

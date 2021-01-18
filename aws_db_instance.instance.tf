@@ -18,7 +18,7 @@ resource "aws_db_instance" "instance" {
   maintenance_window                    = var.instance["maintenance_window"]
   max_allocated_storage                 = var.instance["max_allocated_storage"]
   monitoring_interval                   = var.instance["monitoring_interval"]
-  monitoring_role_arn                   = var.instance["monitoring_role_arn"]
+  monitoring_role_arn                   = var.monitoring_role_arn
   multi_az                              = var.instance["multi_az"]
   name                                  = var.instance["name"]
   option_group_name                     = var.instance["option_group_name"]

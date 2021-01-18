@@ -16,7 +16,6 @@ variable "subnet_group" {
   default = [
     {
       name        = "database-1"
-      name_prefix = null
       description = ""
   }]
 }
@@ -47,4 +46,21 @@ variable "storage_encrypted" {
   description = "Encryption status"
   type        = bool
   default     = true
+}
+
+variable "family" {
+  type    = string
+  default = "postgres11"
+}
+
+
+variable "description" {
+  type    = string
+  default = "Some description"
+}
+
+variable "monitoring_role_arn" {
+  type        = string
+  description = "Role for Monitoring - the ARN"
+  default     = ""
 }
