@@ -22,7 +22,7 @@ Include this repository as a module in your existing Terraform code:
 ```terraform
 module "rds" {
   source            = "JamesWoolfenden/rds/aws"
-  version           = "0.0.5"
+  version           = "0.2.4"
   common_tags       = var.common_tags
   subnet_ids        = var.subnets
   instance          = var.instance
