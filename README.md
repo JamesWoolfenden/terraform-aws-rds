@@ -11,6 +11,7 @@
 
 Terraform module - creates an RDS instance.
 
+When you create a Postgres DB, this module adds enables pgaudit, which is in line with Prowler and Bridgecrew AWS best practices.
 ---
 
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
