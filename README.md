@@ -48,6 +48,7 @@ No requirements.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | common\_tags | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+| custom\_db\_group\_name | Your custom DB parameter group mane | `string` | `""` | no |
 | db\_subnet\_group\_name | The name of the subnet to use for the database | `string` | `"default"` | no |
 | description | n/a | `string` | `"Some description"` | no |
 | family | n/a | `string` | `"postgres11"` | no |

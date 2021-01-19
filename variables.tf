@@ -64,3 +64,9 @@ variable "monitoring_role_arn" {
   description = "Role for Monitoring - the ARN"
   default     = ""
 }
+
+variable "custom_db_group_name" {
+  type        = string
+  description = "Your custom DB parameter group mane"
+  default     = ""
+}

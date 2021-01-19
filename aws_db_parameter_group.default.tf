@@ -1,5 +1,6 @@
-resource "aws_db_parameter_group" "default" {
+resource "aws_db_parameter_group" "custom" {
   count       = (var.instance["engine"] == "postgres" ? 1 : 0)
+  name        = var.custom_db_group_name
   description = var.description
 
   family = var.family

@@ -22,7 +22,7 @@ resource "aws_db_instance" "instance" {
   multi_az                              = var.instance["multi_az"]
   name                                  = var.instance["name"]
   option_group_name                     = var.instance["option_group_name"]
-  parameter_group_name                  = var.instance["parameter_group_name"]
+  parameter_group_name                  = var.custom_db_group_name
   password                              = var.instance_password
   performance_insights_enabled          = var.instance["performance_insights_enabled"]
   performance_insights_kms_key_id       = data.aws_kms_key.rds.arn
