@@ -31,11 +31,12 @@ jobs:
           framework: terraform
   version:
     name: versioning
-    if: ${{ !env.ACT }}
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Bump version and push tag
+        if: ${{ !env.ACT }}
         uses: anothrNick/github-tag-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
