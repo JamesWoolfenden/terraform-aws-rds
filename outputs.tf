@@ -3,5 +3,6 @@ output "db_subnet_group" {
 }
 
 output "instance" {
-  value = aws_db_instance.instance
+  value     = aws_db_instance.instance
+  sensitive = true
 }

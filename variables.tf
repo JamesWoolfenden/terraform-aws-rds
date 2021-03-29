@@ -21,7 +21,8 @@ variable "subnet_group" {
 }
 
 variable "instance_password" {
-  type = string
+  type      = string
+  sensitive = true
 }
 
 variable "db_subnet_group_name" {
