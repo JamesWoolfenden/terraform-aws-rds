@@ -68,6 +68,7 @@ No modules.
 | <a name="input_family"></a> [family](#input\_family) | n/a | `string` | `"postgres11"` | no |
 | <a name="input_instance"></a> [instance](#input\_instance) | Map of all the variables | `any` | n/a | yes |
 | <a name="input_instance_password"></a> [instance\_password](#input\_instance\_password) | n/a | `string` | n/a | yes |
+| <a name="input_monitoring_interval"></a> [monitoring\_interval](#input\_monitoring\_interval) | Monitoring\_interval in seconds | `number` | `60` | no |
 | <a name="input_monitoring_role_arn"></a> [monitoring\_role\_arn](#input\_monitoring\_role\_arn) | Role for Monitoring - the ARN | `string` | `""` | no |
 | <a name="input_publicly_accessible"></a> [publicly\_accessible](#input\_publicly\_accessible) | To comply with security rules CKV\_AWS\_17 this defaults to false | `bool` | `false` | no |
 | <a name="input_rds_role"></a> [rds\_role](#input\_rds\_role) | The IAM ARN of the role for RDS monitoring | `string` | `""` | no |

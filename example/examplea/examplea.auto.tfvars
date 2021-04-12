@@ -19,7 +19,6 @@ instance = {
   performance_insights_enabled          = false
   option_group_name                     = ""
   max_allocated_storage                 = 1000
-  monitoring_interval                   = 60
   multi_az                              = false
   maintenance_window                    = "thu:06:15-thu:06:45"
   deletion_protection                   = false

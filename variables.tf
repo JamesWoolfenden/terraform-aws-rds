@@ -66,6 +66,12 @@ variable "monitoring_role_arn" {
   default     = ""
 }
 
+variable "monitoring_interval" {
+  type        = number
+  default     = 60
+  description = "Monitoring_interval in seconds"
+}
+
 variable "custom_db_group_name" {
   type        = string
   description = "Your custom DB parameter group mane"
