@@ -54,7 +54,6 @@ variable "family" {
   default = "postgres11"
 }
 
-
 variable "description" {
   type    = string
   default = "Some description"

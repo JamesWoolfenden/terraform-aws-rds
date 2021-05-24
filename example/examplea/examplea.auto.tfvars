@@ -3,7 +3,6 @@ common_tags = {
 
 
 instance = {
-  db_subnet_group_name                  = "dbsubnetrds"
   instance_class                        = "db.t2.micro"
   storage_type                          = ""
   username                              = "dbgeezer"
@@ -19,7 +18,6 @@ instance = {
   performance_insights_enabled          = false
   option_group_name                     = ""
   max_allocated_storage                 = 1000
-  multi_az                              = false
   maintenance_window                    = "thu:06:15-thu:06:45"
   deletion_protection                   = false
   iam_database_authentication_enabled   = false

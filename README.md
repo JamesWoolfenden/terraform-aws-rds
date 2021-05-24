@@ -32,6 +32,23 @@ module "rds" {
 }
 ```
 
+## Costs
+
+Note: Costs start at this estimate based on the examplea values.
+
+```text
+Monthly cost estimate
+
+Project: .
+
+ Name                                 Monthly Qty  Unit       Monthly Cost
+
+ module.rds.aws_db_instance.instance
+ ├─ Database instance                         730  hours            $27.74
+ └─ Database storage                           20  GB-months         $5.32
+
+ PROJECT TOTAL                                                      $33.06
+```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
@@ -70,6 +87,7 @@ No modules.
 | <a name="input_instance_password"></a> [instance\_password](#input\_instance\_password) | n/a | `string` | n/a | yes |
 | <a name="input_monitoring_interval"></a> [monitoring\_interval](#input\_monitoring\_interval) | Monitoring\_interval in seconds | `number` | `60` | no |
 | <a name="input_monitoring_role_arn"></a> [monitoring\_role\_arn](#input\_monitoring\_role\_arn) | Role for Monitoring - the ARN | `string` | `""` | no |
+| <a name="input_multi_az"></a> [multi\_az](#input\_multi\_az) | n/a | `bool` | `true` | no |
 | <a name="input_publicly_accessible"></a> [publicly\_accessible](#input\_publicly\_accessible) | To comply with security rules CKV\_AWS\_17 this defaults to false | `bool` | `false` | no |
 | <a name="input_rds_role"></a> [rds\_role](#input\_rds\_role) | The IAM ARN of the role for RDS monitoring | `string` | `""` | no |
 | <a name="input_storage_encrypted"></a> [storage\_encrypted](#input\_storage\_encrypted) | Encryption status | `bool` | `true` | no |
