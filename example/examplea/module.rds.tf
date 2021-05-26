@@ -1,6 +1,5 @@
 module "rds" {
   source            = "../../"
-  common_tags       = var.common_tags
   subnet_ids        = data.aws_subnet_ids.examplea.ids
   instance          = var.instance
   instance_password = random_string.db_password.result

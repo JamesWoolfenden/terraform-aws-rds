@@ -34,7 +34,6 @@ resource "aws_db_instance" "instance" {
   snapshot_identifier                   = var.instance["snapshot_identifier"]
   storage_encrypted                     = var.storage_encrypted
   storage_type                          = var.instance["storage_type"]
-  tags                                  = var.common_tags
   username                              = var.instance["username"]
 }
 

@@ -1,7 +1,3 @@
-common_tags = {
-  "createdby" = "Terraform"
-"testedby" = "Checkov" }
-
 
 instance = {
   allocated_storage                     = 20

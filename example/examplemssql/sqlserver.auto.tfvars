@@ -34,10 +34,6 @@ instance = {
   username                              = "admin"
 }
 
-common_tags = {
-  "createdby" = "Terrraform"
-}
-
 subnet_group = [{
   name        = "group-1"
   description = "sql dbs"

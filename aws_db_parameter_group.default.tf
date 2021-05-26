@@ -16,6 +16,4 @@ resource "aws_db_parameter_group" "custom" {
     name         = "pgaudit.role"
     value        = "rds_pgaudit"
   }
-
-  tags = var.common_tags
 }

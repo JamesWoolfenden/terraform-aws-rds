@@ -1,6 +1,3 @@
-common_tags = {
-"createdby" = "Terraform" }
-
 
 instance = {
   instance_class                        = "db.t2.micro"

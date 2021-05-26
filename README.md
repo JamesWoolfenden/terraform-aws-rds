@@ -23,7 +23,6 @@ Include this repository as a module in your existing Terraform code:
 module "rds" {
   source            = "JamesWoolfenden/rds/aws"
   version           = "0.2.4"
-  common_tags       = var.common_tags
   subnet_ids        = var.subnets
   instance          = var.instance
   instance_password = "Password123"
@@ -78,7 +77,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
 | <a name="input_custom_db_group_name"></a> [custom\_db\_group\_name](#input\_custom\_db\_group\_name) | Your custom DB parameter group mane | `string` | `""` | no |
 | <a name="input_db_subnet_group_name"></a> [db\_subnet\_group\_name](#input\_db\_subnet\_group\_name) | The name of the subnet to use for the database | `string` | `"default"` | no |
 | <a name="input_description"></a> [description](#input\_description) | n/a | `string` | `"Some description"` | no |
