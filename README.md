@@ -31,6 +31,12 @@ module "rds" {
 }
 ```
 
+To find the parameter group family:
+
+```cli
+aws rds describe-db-engine-versions --query "DBEngineVersions[].DBParameterGroupFamily"
+```
+
 ## Costs
 
 Note: Costs start at this estimate based on the examplea values.
@@ -80,7 +86,7 @@ No modules.
 | <a name="input_custom_db_group_name"></a> [custom\_db\_group\_name](#input\_custom\_db\_group\_name) | Your custom DB parameter group mane | `string` | `""` | no |
 | <a name="input_db_subnet_group_name"></a> [db\_subnet\_group\_name](#input\_db\_subnet\_group\_name) | The name of the subnet to use for the database | `string` | `"default"` | no |
 | <a name="input_description"></a> [description](#input\_description) | n/a | `string` | `"Some description"` | no |
-| <a name="input_family"></a> [family](#input\_family) | n/a | `string` | `"postgres11"` | no |
+| <a name="input_family"></a> [family](#input\_family) | n/a | `string` | `"aurora-postgresql11"` | no |
 | <a name="input_instance"></a> [instance](#input\_instance) | Map of all the variables | `any` | n/a | yes |
 | <a name="input_instance_password"></a> [instance\_password](#input\_instance\_password) | n/a | `string` | n/a | yes |
 | <a name="input_monitoring_interval"></a> [monitoring\_interval](#input\_monitoring\_interval) | Monitoring\_interval in seconds | `number` | `60` | no |

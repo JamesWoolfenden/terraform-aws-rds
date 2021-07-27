@@ -47,7 +47,7 @@ variable "storage_encrypted" {
 
 variable "family" {
   type    = string
-  default = "postgres11"
+  default = "aurora-postgresql11"
 }
 
 variable "description" {
