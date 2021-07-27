@@ -1,5 +1,6 @@
 
 instance = {
+  enabled_cloudwatch_logs_exports       = []
   instance_class                        = "db.t2.micro"
   storage_type                          = ""
   username                              = "dbgeezer"

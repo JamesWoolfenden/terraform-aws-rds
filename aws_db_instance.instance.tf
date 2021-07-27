@@ -7,7 +7,7 @@ resource "aws_db_instance" "instance" {
   copy_tags_to_snapshot                 = var.instance["copy_tags_to_snapshot"]
   db_subnet_group_name                  = aws_db_subnet_group.access[0].name
   deletion_protection                   = var.instance["deletion_protection"]
-  enabled_cloudwatch_logs_exports       = ["audit", "error", "general", "slowquery"]
+  enabled_cloudwatch_logs_exports       = var.instance["enabled_cloudwatch_logs_exports"]
   engine                                = var.instance["engine"]
   engine_version                        = var.instance["engine_version"]
   iam_database_authentication_enabled   = var.instance["iam_database_authentication_enabled"]
