@@ -1,7 +1,6 @@
 
 instance = {
   allocated_storage                     = 20
-  auto_minor_version_upgrade            = true
   availability_zone                     = "eu-west-2a"
   backup_retention_period               = 7
   backup_window                         = "07:33-08:03"

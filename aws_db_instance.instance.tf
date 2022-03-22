@@ -1,7 +1,7 @@
 resource "aws_db_instance" "instance" {
   #checkov:skip=CKV_AWS_133:OUT OF DATE CHECK
   allocated_storage                     = var.instance["allocated_storage"]
-  auto_minor_version_upgrade            = var.instance["auto_minor_version_upgrade"]
+  auto_minor_version_upgrade            = true
   availability_zone                     = var.instance["availability_zone"]
   backup_retention_period               = var.instance["backup_retention_period"]
   backup_window                         = var.instance["backup_window"]

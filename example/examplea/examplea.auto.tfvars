@@ -24,7 +24,6 @@ instance = {
   license_model                         = ""
   availability_zone                     = "eu-west-2a"
   backup_retention_period               = 14
-  auto_minor_version_upgrade            = true
   backup_window                         = "07:33-08:03"
 }
 

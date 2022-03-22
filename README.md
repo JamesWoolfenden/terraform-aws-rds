@@ -56,16 +56,15 @@ Project: .
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name                                             | Version |
-| ------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -73,40 +72,39 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                            | Type        |
-| ------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [aws_db_instance.instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance)             | resource    |
-| [aws_db_parameter_group.custom](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_parameter_group) | resource    |
-| [aws_db_subnet_group.access](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_subnet_group)       | resource    |
-| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity)   | data source |
-| [aws_kms_key.rds](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/kms_key)                       | data source |
+| Name | Type |
+|------|------|
+| [aws_db_instance.instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance) | resource |
+| [aws_db_parameter_group.custom](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_parameter_group) | resource |
+| [aws_db_subnet_group.access](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_subnet_group) | resource |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
+| [aws_kms_key.rds](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/kms_key) | data source |
 
 ## Inputs
 
-| Name                                                                                          | Description                                                     | Type        | Default                                                                       | Required |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ----------- | ----------------------------------------------------------------------------- | :------: |
-| <a name="input_custom_db_group_name"></a> [custom_db_group_name](#input_custom_db_group_name) | Your custom DB parameter group mane                             | `string`    | `""`                                                                          |    no    |
-| <a name="input_db_subnet_group_name"></a> [db_subnet_group_name](#input_db_subnet_group_name) | The name of the subnet to use for the database                  | `string`    | `"default"`                                                                   |    no    |
-| <a name="input_description"></a> [description](#input_description)                            | n/a                                                             | `string`    | `"Some description"`                                                          |    no    |
-| <a name="input_family"></a> [family](#input_family)                                           | n/a                                                             | `string`    | `"aurora-postgresql11"`                                                       |    no    |
-| <a name="input_instance"></a> [instance](#input_instance)                                     | Map of all the variables                                        | `any`       | n/a                                                                           |   yes    |
-| <a name="input_instance_password"></a> [instance_password](#input_instance_password)          | n/a                                                             | `string`    | n/a                                                                           |   yes    |
-| <a name="input_monitoring_interval"></a> [monitoring_interval](#input_monitoring_interval)    | Monitoring_interval in seconds                                  | `number`    | `60`                                                                          |    no    |
-| <a name="input_monitoring_role_arn"></a> [monitoring_role_arn](#input_monitoring_role_arn)    | Role for Monitoring - the ARN                                   | `string`    | `""`                                                                          |    no    |
-| <a name="input_multi_az"></a> [multi_az](#input_multi_az)                                     | n/a                                                             | `bool`      | `true`                                                                        |    no    |
-| <a name="input_publicly_accessible"></a> [publicly_accessible](#input_publicly_accessible)    | To comply with security rules CKV_AWS_17 this defaults to false | `bool`      | `false`                                                                       |    no    |
-| <a name="input_rds_role"></a> [rds_role](#input_rds_role)                                     | The IAM ARN of the role for RDS monitoring                      | `string`    | `""`                                                                          |    no    |
-| <a name="input_storage_encrypted"></a> [storage_encrypted](#input_storage_encrypted)          | Encryption status                                               | `bool`      | `true`                                                                        |    no    |
-| <a name="input_subnet_group"></a> [subnet_group](#input_subnet_group)                         | n/a                                                             | `list`      | <pre>[<br> {<br> "description": "",<br> "name": "database-1"<br> }<br>]</pre> |    no    |
-| <a name="input_subnet_ids"></a> [subnet_ids](#input_subnet_ids)                               | A list of Subnet ids                                            | `list(any)` | n/a                                                                           |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_custom_db_group_name"></a> [custom\_db\_group\_name](#input\_custom\_db\_group\_name) | Your custom DB parameter group mane | `string` | `""` | no |
+| <a name="input_db_subnet_group_name"></a> [db\_subnet\_group\_name](#input\_db\_subnet\_group\_name) | The name of the subnet to use for the database | `string` | `"default"` | no |
+| <a name="input_description"></a> [description](#input\_description) | n/a | `string` | `"Some description"` | no |
+| <a name="input_family"></a> [family](#input\_family) | n/a | `string` | `"aurora-postgresql11"` | no |
+| <a name="input_instance"></a> [instance](#input\_instance) | Map of all the variables | `any` | n/a | yes |
+| <a name="input_instance_password"></a> [instance\_password](#input\_instance\_password) | n/a | `string` | n/a | yes |
+| <a name="input_monitoring_interval"></a> [monitoring\_interval](#input\_monitoring\_interval) | Monitoring\_interval in seconds | `number` | `60` | no |
+| <a name="input_monitoring_role_arn"></a> [monitoring\_role\_arn](#input\_monitoring\_role\_arn) | Role for Monitoring - the ARN | `string` | `""` | no |
+| <a name="input_multi_az"></a> [multi\_az](#input\_multi\_az) | n/a | `bool` | `true` | no |
+| <a name="input_publicly_accessible"></a> [publicly\_accessible](#input\_publicly\_accessible) | To comply with security rules CKV\_AWS\_17 this defaults to false | `bool` | `false` | no |
+| <a name="input_rds_role"></a> [rds\_role](#input\_rds\_role) | The IAM ARN of the role for RDS monitoring | `string` | `""` | no |
+| <a name="input_storage_encrypted"></a> [storage\_encrypted](#input\_storage\_encrypted) | Encryption status | `bool` | `true` | no |
+| <a name="input_subnet_group"></a> [subnet\_group](#input\_subnet\_group) | n/a | `list` | <pre>[<br>  {<br>    "description": "",<br>    "name": "database-1"<br>  }<br>]</pre> | no |
+| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | A list of Subnet ids | `list(any)` | n/a | yes |
 
 ## Outputs
 
-| Name                                                                             | Description |
-| -------------------------------------------------------------------------------- | ----------- |
-| <a name="output_db_subnet_group"></a> [db_subnet_group](#output_db_subnet_group) | n/a         |
-| <a name="output_instance"></a> [instance](#output_instance)                      | n/a         |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_db_subnet_group"></a> [db\_subnet\_group](#output\_db\_subnet\_group) | n/a |
+| <a name="output_instance"></a> [instance](#output\_instance) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects

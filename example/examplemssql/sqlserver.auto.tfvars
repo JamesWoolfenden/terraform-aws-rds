@@ -1,5 +1,4 @@
 instance = {
-  auto_minor_version_upgrade            = false
   allocated_storage                     = 20
   availability_zone                     = ""
   backup_retention_period               = 7
