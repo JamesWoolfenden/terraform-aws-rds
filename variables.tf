@@ -39,12 +39,6 @@ variable "publicly_accessible" {
   default     = false
 }
 
-variable "storage_encrypted" {
-  description = "Encryption status"
-  type        = bool
-  default     = true
-}
-
 variable "family" {
   type    = string
   default = "aurora-postgresql11"
@@ -71,4 +65,8 @@ variable "custom_db_group_name" {
   type        = string
   description = "Your custom DB parameter group mane"
   default     = ""
+}
+
+variable "kms_key" {
+
 }
