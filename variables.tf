@@ -40,8 +40,9 @@ variable "publicly_accessible" {
 }
 
 variable "family" {
-  type    = string
-  default = "aurora-postgresql11"
+  type        = string
+  default     = "aurora-postgresql14"
+  description = "Needs to be set to your specific db"
 }
 
 variable "description" {
@@ -69,4 +70,10 @@ variable "custom_db_group_name" {
 
 variable "kms_key" {
 
+}
+
+variable "multi_az" {
+  type        = bool
+  default     = true
+  description = "Controls multi az"
 }

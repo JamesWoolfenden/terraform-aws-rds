@@ -6,6 +6,7 @@ module "rds" {
   db_subnet_group_name = tolist(data.aws_subnet_ids.examplea.ids)[0]
   subnet_group         = var.subnet_group
   kms_key              = aws_kms_key.example
+  multi_az             = true
 }
 
 data "aws_subnet_ids" "examplea" {

@@ -2,9 +2,9 @@
 instance = {
   allocated_storage                     = 20
   availability_zone                     = "eu-west-2a"
-  backup_retention_period               = 14
   backup_window                         = "07:33-08:03"
-  copy_tags_to_snapshot                 = false
+  backup_retention_period               = 14
+  copy_tags_to_snapshot                 = true
   deletion_protection                   = false
   enabled_cloudwatch_logs_exports       = []
   engine                                = "mysql"
@@ -23,7 +23,7 @@ instance = {
   security_group_names                  = ["sc1232345"]
   skip_final_snapshot                   = false
   snapshot_identifier                   = ""
-  storage_type                          = "standard"
+  storage_type                          = "gp2"
   username                              = "dbgeezer"
 }
 

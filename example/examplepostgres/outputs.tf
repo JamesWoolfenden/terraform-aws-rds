@@ -6,3 +6,11 @@ output "instance" {
   value     = module.rds.instance
   sensitive = true
 }
+
+output "username_location" {
+  value = module.rds.username_location
+}
+
+output "password_location" {
+  value = module.rds.password_location
+}

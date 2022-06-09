@@ -17,7 +17,6 @@ instance = {
   maintenance_window                    = "tue:22:19-tue:22:49"
   monitoring_role_arn                   = ""
   max_allocated_storage                 = "1000"
-  multi_az                              = false
   name                                  = ""
   option_group_name                     = "default:sqlserver-ex-14-00"
   parameter_group_name                  = "default.sqlserver-ex-14.0"

@@ -37,8 +37,3 @@ resource "aws_db_instance" "instance" {
   storage_type                          = var.instance["storage_type"]
   username                              = var.instance["username"]
 }
-
-variable "multi_az" {
-  type    = bool
-  default = true
-}

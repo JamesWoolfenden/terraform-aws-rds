@@ -6,3 +6,11 @@ output "instance" {
   value     = aws_db_instance.instance
   sensitive = true
 }
+
+output "username_location" {
+  value = aws_secretsmanager_secret.username
+}
+
+output "password_location" {
+  value = aws_secretsmanager_secret.password
+}
