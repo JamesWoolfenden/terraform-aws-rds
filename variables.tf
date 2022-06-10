@@ -77,3 +77,9 @@ variable "multi_az" {
   default     = true
   description = "Controls multi az"
 }
+
+variable "recovery_window_in_days" {
+  type        = number
+  default     = 0
+  description = "The number of days for schedule of deletion of secret"
+}

@@ -1,11 +1,13 @@
 resource "aws_secretsmanager_secret" "username" {
-  name       = "${var.instance["name"]}-db-username"
-  kms_key_id = var.kms_key.arn
+  name                    = "${var.instance["name"]}-db-username"
+  recovery_window_in_days = var.recovery_window_in_days
+  kms_key_id              = var.kms_key.arn
 }
 
 resource "aws_secretsmanager_secret" "password" {
-  name       = "${var.instance["name"]}-db-password"
-  kms_key_id = var.kms_key.arn
+  name                    = "${var.instance["name"]}-db-password"
+  recovery_window_in_days = var.recovery_window_in_days
+  kms_key_id              = var.kms_key.arn
 }
 
 resource "aws_secretsmanager_secret_version" "username" {
