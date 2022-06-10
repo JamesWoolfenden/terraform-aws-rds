@@ -20,7 +20,6 @@ instance = {
   performance_insights_enabled          = false
   performance_insights_retention_period = 20
   port                                  = 1433
-  security_group_names                  = ["sc1232345"]
   skip_final_snapshot                   = false
   snapshot_identifier                   = ""
   storage_type                          = "gp2"

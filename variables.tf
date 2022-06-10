@@ -83,3 +83,12 @@ variable "recovery_window_in_days" {
   default     = 0
   description = "The number of days for schedule of deletion of secret"
 }
+
+variable "vpc_id" {
+  type        = string
+  description = "The id of the VPC for the security group and db"
+}
+
+variable "allowed_cidr" {
+  type = string
+}

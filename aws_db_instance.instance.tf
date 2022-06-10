@@ -29,11 +29,11 @@ resource "aws_db_instance" "instance" {
   performance_insights_kms_key_id       = var.kms_key.arn
   performance_insights_retention_period = var.instance["performance_insights_retention_period"]
   port                                  = var.instance["port"]
-  publicly_accessible                   = false
-  security_group_names                  = var.instance["security_group_names"]
+  publicly_accessible                   = var.publicly_accessible
   skip_final_snapshot                   = var.instance["skip_final_snapshot"]
   snapshot_identifier                   = var.instance["snapshot_identifier"]
   storage_encrypted                     = true
   storage_type                          = var.instance["storage_type"]
   username                              = var.instance["username"]
+  vpc_security_group_ids                = [aws_security_group.dbaccess.id]
 }

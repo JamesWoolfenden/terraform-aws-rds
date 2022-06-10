@@ -24,7 +24,6 @@ instance = {
   performance_insights_enabled          = true
   performance_insights_retention_period = "7"
   port                                  = "1433"
-  security_group_names                  = null
   skip_final_snapshot                   = true
   snapshot_identifier                   = ""
   storage_type                          = ""
