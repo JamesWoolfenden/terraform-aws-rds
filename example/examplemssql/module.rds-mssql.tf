@@ -6,7 +6,7 @@ module "rds-mssql" {
   instance          = var.instance
   instance_password = "Password123"
   subnet_group      = var.subnet_group
-  kms_key_arn       = aws_kms_key.example
+  kms_key_arn       = aws_kms_key.example.arn
   vpc_id            = data.aws_vpc.examplea[0].id
 }
 
