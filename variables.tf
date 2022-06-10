@@ -17,8 +17,7 @@ variable "subnet_group" {
 }
 
 variable "instance_password" {
-  type      = string
-  sensitive = true
+  type = string
 }
 
 variable "db_subnet_group_name" {
@@ -68,8 +67,9 @@ variable "custom_db_group_name" {
   default     = ""
 }
 
-variable "kms_key" {
-
+variable "kms_key_arn" {
+  type        = string
+  description = "The ARN of a KMS key"
 }
 
 variable "multi_az" {

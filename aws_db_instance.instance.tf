@@ -14,7 +14,8 @@ resource "aws_db_instance" "instance" {
   iam_database_authentication_enabled   = var.instance["iam_database_authentication_enabled"]
   instance_class                        = var.instance["instance_class"]
   iops                                  = var.instance["iops"]
-  kms_key_id                            = var.kms_key.arn
+  kms_key_id                            = var.kms_key_arn
+  identifier                            = var.instance["name"]
   license_model                         = var.instance["license_model"]
   maintenance_window                    = var.instance["maintenance_window"]
   max_allocated_storage                 = var.instance["max_allocated_storage"]
@@ -26,7 +27,7 @@ resource "aws_db_instance" "instance" {
   parameter_group_name                  = var.custom_db_group_name
   password                              = var.instance_password
   performance_insights_enabled          = var.instance["performance_insights_enabled"]
-  performance_insights_kms_key_id       = var.kms_key.arn
+  performance_insights_kms_key_id       = var.kms_key_arn
   performance_insights_retention_period = var.instance["performance_insights_retention_period"]
   port                                  = var.instance["port"]
   publicly_accessible                   = var.publicly_accessible

@@ -16,7 +16,7 @@ instance = {
   maintenance_window                    = "thu:06:15-thu:06:45"
   max_allocated_storage                 = 1000
   monitoring_interval                   = 0
-  name                                  = "platform"
+  name                                  = "platform2"
   option_group_name                     = "default:postgres-14"
   parameter_group_name                  = "default.postgres14"
   performance_insights_enabled          = true
@@ -29,8 +29,8 @@ instance = {
 }
 
 subnet_group = [{
-  name        = "postgres"
-  description = "postgres-group-name"
+  name        = "postgres2"
+  description = "postgres2-group-name"
 }]
 
 custom_db_group_name = "custom"
