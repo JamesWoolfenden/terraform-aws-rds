@@ -94,7 +94,7 @@ No modules.
 | <a name="input_description"></a> [description](#input\_description) | n/a | `string` | `"Some description"` | no |
 | <a name="input_family"></a> [family](#input\_family) | Needs to be set to your specific db | `string` | `"aurora-postgresql14"` | no |
 | <a name="input_instance"></a> [instance](#input\_instance) | Map of all the variables | `any` | n/a | yes |
-| <a name="input_instance_password"></a> [instance\_password](#input\_instance\_password) | n/a | `string` | n/a | yes |
+| <a name="input_instance_password"></a> [instance\_password](#input\_instance\_password) | Instance Password | `string` | n/a | yes |
 | <a name="input_kms_key_arn"></a> [kms\_key\_arn](#input\_kms\_key\_arn) | The ARN of a KMS key | `string` | n/a | yes |
 | <a name="input_monitoring_interval"></a> [monitoring\_interval](#input\_monitoring\_interval) | Monitoring\_interval in seconds | `number` | `60` | no |
 | <a name="input_monitoring_role_arn"></a> [monitoring\_role\_arn](#input\_monitoring\_role\_arn) | Role for Monitoring - the ARN | `string` | `""` | no |

@@ -7,7 +7,7 @@ module "rds" {
   db_subnet_group_name = tolist(data.aws_subnet_ids.examplea.ids)[0]
   subnet_group         = var.subnet_group
   custom_db_group_name = var.custom_db_group_name
-  kms_key_arn          = null
+  kms_key_arn          = aws_kms_key.example.arn
   publicly_accessible  = true
   monitoring_interval  = 0
   family               = "postgres14"
