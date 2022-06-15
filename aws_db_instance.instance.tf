@@ -1,5 +1,6 @@
 resource "aws_db_instance" "instance" {
   #checkov:skip=CKV_AWS_133:OUT OF DATE CHECK
+  apply_immediately                     = var.apply_immediately
   allocated_storage                     = var.instance["allocated_storage"]
   auto_minor_version_upgrade            = true
   availability_zone                     = var.instance["availability_zone"]

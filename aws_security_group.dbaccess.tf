@@ -8,7 +8,7 @@ resource "aws_security_group" "dbaccess" {
     from_port   = var.instance["port"]
     to_port     = var.instance["port"]
     protocol    = "tcp"
-    cidr_blocks = [var.allowed_cidr]
+    cidr_blocks = var.allowed_cidr
   }
 
   egress {

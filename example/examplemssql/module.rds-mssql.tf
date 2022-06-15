@@ -1,7 +1,7 @@
 
 module "rds-mssql" {
   source            = "../../"
-  allowed_cidr      = "${module.data.ip}/32"
+  allowed_cidr      = ["${module.data.ip}/32"]
   subnet_ids        = var.subnet_ids
   instance          = var.instance
   instance_password = "Password123"

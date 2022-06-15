@@ -91,5 +91,11 @@ variable "vpc_id" {
 }
 
 variable "allowed_cidr" {
-  type = string
+  type = list(string)
+}
+
+variable "apply_immediately" {
+  type        = bool
+  default     = false
+  description = "Apply changes immediately"
 }

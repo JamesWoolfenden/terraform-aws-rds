@@ -14,3 +14,7 @@ output "username_location" {
 output "password_location" {
   value = aws_secretsmanager_secret.password
 }
+
+output "security_group" {
+  value = aws_security_group.dbaccess
+}

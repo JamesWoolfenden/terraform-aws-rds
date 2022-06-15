@@ -14,3 +14,7 @@ output "username_location" {
 output "password_location" {
   value = module.rds.password_location
 }
+
+output "security_group" {
+  value = module.rds.security_group
+}
