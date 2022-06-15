@@ -18,3 +18,7 @@ output "password_location" {
 output "security_group" {
   value = module.rds.security_group
 }
+
+output "policy" {
+  value = module.rds.policy
+}

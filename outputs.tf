@@ -18,3 +18,7 @@ output "password_location" {
 output "security_group" {
   value = aws_security_group.dbaccess
 }
+
+output "policy" {
+  value = aws_iam_policy.dbaccess
+}
