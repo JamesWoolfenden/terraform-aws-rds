@@ -6,9 +6,9 @@ resource "aws_db_instance" "instance" {
   availability_zone                     = var.instance["availability_zone"]
   backup_retention_period               = var.instance["backup_retention_period"]
   backup_window                         = var.instance["backup_window"]
-  copy_tags_to_snapshot                 = var.instance["copy_tags_to_snapshot"]
+  copy_tags_to_snapshot                 = var.copy_tags_to_snapshot
   db_subnet_group_name                  = aws_db_subnet_group.access[0].name
-  deletion_protection                   = var.instance["deletion_protection"]
+  deletion_protection                   = var.deletion_protection
   enabled_cloudwatch_logs_exports       = var.instance["enabled_cloudwatch_logs_exports"]
   engine                                = var.instance["engine"]
   engine_version                        = var.instance["engine_version"]
@@ -38,4 +38,15 @@ resource "aws_db_instance" "instance" {
   storage_type                          = var.instance["storage_type"]
   username                              = var.instance["username"]
   vpc_security_group_ids                = [aws_security_group.dbaccess.id]
+}
+
+
+variable "copy_tags_to_snapshot" {
+  type = bool
+  default=true
+}
+
+variable "delete_protection" {
+  type=bool
+  default=true
 }

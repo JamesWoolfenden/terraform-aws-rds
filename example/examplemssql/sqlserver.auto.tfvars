@@ -3,9 +3,7 @@ instance = {
   availability_zone                     = ""
   backup_retention_period               = 7
   backup_window                         = "23:01-23:31"
-  copy_tags_to_snapshot                 = true
   create_db_parameter_group             = false
-  deletion_protection                   = false
   engine                                = "sqlserver-ex"
   engine_version                        = "14.00.3223.3.v1"
   iam_database_authentication_enabled   = false
@@ -13,7 +11,7 @@ instance = {
   iops                                  = 0
   instance_class                        = "db.t2.micro"
   license_model                         = "license-included"
-  monitoring_interval                   = 0
+  monitoring_interval                   = 60
   maintenance_window                    = "tue:22:19-tue:22:49"
   monitoring_role_arn                   = ""
   max_allocated_storage                 = "1000"
@@ -30,7 +28,6 @@ instance = {
   timezone                              = "Central Standard Time"
   username                              = "admin"
 }
-
 subnet_group = [{
   name        = "group-1"
   description = "sql dbs"

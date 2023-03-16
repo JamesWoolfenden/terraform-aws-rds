@@ -1,6 +1,7 @@
 module "rds" {
   source               = "../../"
   apply_immediately    = true
+  deletion_protection                   = true
   allowed_cidr         = ["${module.data.ip}/32", "86.147.65.211/32"]
   subnet_ids           = data.aws_subnet_ids.examplea.ids
   instance             = var.instance
@@ -9,10 +10,10 @@ module "rds" {
   subnet_group         = var.subnet_group
   custom_db_group_name = var.custom_db_group_name
   kms_key_arn          = aws_kms_key.example.arn
-  publicly_accessible  = true
-  monitoring_interval  = 0
+  publicly_accessible  = false
+  monitoring_interval  = 60
   family               = "postgres14"
-  multi_az             = false
+  multi_az             = true
   vpc_id               = data.aws_vpc.examplea[0].id
 }
 data "aws_subnet_ids" "examplea" {
