@@ -42,11 +42,11 @@ resource "aws_db_instance" "instance" {
 
 
 variable "copy_tags_to_snapshot" {
-  type = bool
-  default=true
+  type    = bool
+  default = true
 }
 
-variable "delete_protection" {
-  type=bool
-  default=true
+variable "deletion_protection" {
+  type    = bool
+  default = true
 }

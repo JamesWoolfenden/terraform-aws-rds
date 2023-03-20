@@ -64,7 +64,7 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.59.0 |
 
 ## Modules
 
@@ -92,8 +92,10 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_allowed_cidr"></a> [allowed\_cidr](#input\_allowed\_cidr) | n/a | `list(string)` | n/a | yes |
 | <a name="input_apply_immediately"></a> [apply\_immediately](#input\_apply\_immediately) | Apply changes immediately | `bool` | `false` | no |
+| <a name="input_copy_tags_to_snapshot"></a> [copy\_tags\_to\_snapshot](#input\_copy\_tags\_to\_snapshot) | n/a | `bool` | `true` | no |
 | <a name="input_custom_db_group_name"></a> [custom\_db\_group\_name](#input\_custom\_db\_group\_name) | Your custom DB parameter group mane | `string` | `""` | no |
 | <a name="input_db_subnet_group_name"></a> [db\_subnet\_group\_name](#input\_db\_subnet\_group\_name) | The name of the subnet to use for the database | `string` | `"default"` | no |
+| <a name="input_deletion_protection"></a> [deletion\_protection](#input\_deletion\_protection) | n/a | `bool` | `true` | no |
 | <a name="input_description"></a> [description](#input\_description) | n/a | `string` | `"Some description"` | no |
 | <a name="input_family"></a> [family](#input\_family) | Needs to be set to your specific db | `string` | `"aurora-postgresql14"` | no |
 | <a name="input_instance"></a> [instance](#input\_instance) | Map of all the variables | `any` | n/a | yes |
@@ -151,7 +153,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ec2:RevokeSecurityGroupEgress",
                 "ec2:RevokeSecurityGroupIngress"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor1",
@@ -164,7 +168,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "iam:ListPolicyVersions",
                 "iam:PassRole"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor2",
@@ -173,6 +179,7 @@ resource "aws_iam_policy" "terraform_pike" {
                 "rds:CreateDBInstance",
                 "rds:CreateDBParameterGroup",
                 "rds:CreateDBSubnetGroup",
+                "rds:DeleteDBInstance",
                 "rds:DeleteDBParameterGroup",
                 "rds:DeleteDBSubnetGroup",
                 "rds:DescribeDBInstances",
@@ -183,7 +190,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "rds:ModifyDBInstance",
                 "rds:ModifyDBParameterGroup"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor3",
@@ -196,7 +205,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "secretsmanager:GetSecretValue",
                 "secretsmanager:PutSecretValue"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
