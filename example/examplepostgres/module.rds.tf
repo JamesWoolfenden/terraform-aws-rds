@@ -1,7 +1,7 @@
 module "rds" {
   source               = "../../"
   apply_immediately    = true
-  deletion_protection                   = true
+  deletion_protection  = true
   allowed_cidr         = ["${module.data.ip}/32", "86.147.65.211/32"]
   subnet_ids           = data.aws_subnet_ids.examplea.ids
   instance             = var.instance
