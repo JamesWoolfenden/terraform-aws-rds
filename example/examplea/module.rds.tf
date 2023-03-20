@@ -1,30 +1,20 @@
 module "rds" {
-  source               = "../../"
-  allowed_cidr         = ["${module.data.ip}/32", "86.147.65.211/32"]
+  source       = "../../"
+  allowed_cidr = ["${module.data.ip}/32", "86.147.65.211/32"]
 
-  deletion_protection                   = true
-  subnet_ids           = data.aws_subnet_ids.examplea.ids
+  deletion_protection  = true
+  subnet_ids           = ["subnet-0562ef1d304b968f4"]
   instance             = var.instance
   instance_password    = random_password.password.result
-  db_subnet_group_name = tolist(data.aws_subnet_ids.examplea.ids)[0]
+  db_subnet_group_name = "subnet-0562ef1d304b968f4"
   subnet_group         = var.subnet_group
   kms_key_arn          = aws_kms_key.example.arn
   multi_az             = true
-  vpc_id               = data.aws_vpc.examplea[0].id
+  vpc_id               = "vpc-03036aea287d9ee9b"
 }
 
-data "aws_subnet_ids" "examplea" {
-  vpc_id = data.aws_vpc.examplea[0].id
-}
-
-data "aws_vpcs" "examplea" {}
-
-data "aws_vpc" "examplea" {
-  count = length(data.aws_vpcs.examplea.ids)
-  id    = tolist(data.aws_vpcs.examplea.ids)[count.index]
-}
 
 module "data" {
   source  = "jameswoolfenden/ip/http"
-  version = "0.3.2"
+  version = "0.3.12"
 }
