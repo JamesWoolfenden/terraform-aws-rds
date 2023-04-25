@@ -99,3 +99,19 @@ variable "apply_immediately" {
   default     = false
   description = "Apply changes immediately"
 }
+
+
+variable "copy_tags_to_snapshot" {
+  type    = bool
+  default = true
+}
+
+variable "deletion_protection" {
+  type    = bool
+  default = true
+}
+
+variable "backup_retention_period" {
+  type    = number
+  default = 14
+}

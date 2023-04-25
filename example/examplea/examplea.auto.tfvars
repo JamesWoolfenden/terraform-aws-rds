@@ -3,7 +3,6 @@ instance = {
   allocated_storage                     = 20
   availability_zone                     = "eu-west-2a"
   backup_window                         = "07:33-08:03"
-  backup_retention_period               = 14
   enabled_cloudwatch_logs_exports       = []
   engine                                = "mysql"
   engine_version                        = ""

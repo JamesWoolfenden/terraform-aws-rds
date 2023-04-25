@@ -1,3 +1,4 @@
+#tfsec:ignore:aws-ec2-no-public-egress-sgr
 resource "aws_security_group" "dbaccess" {
   name        = "${var.instance["name"]}-allow-db-access"
   description = "Allow inbound traffic"
