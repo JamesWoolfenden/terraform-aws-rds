@@ -4,9 +4,9 @@ provider "aws" {
     tags = {
       createdBy = "Terraform"
       module    = "terraform-aws-rds"
+      owner     = "James Woolfenden"
     }
   }
 }
-
 provider "random" {
 }
