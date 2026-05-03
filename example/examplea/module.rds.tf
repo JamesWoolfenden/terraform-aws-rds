@@ -12,9 +12,6 @@ module "rds" {
   multi_az                = true
   vpc_id                  = "vpc-03036aea287d9ee9b"
 }
-
-
 module "data" {
-  source  = "jameswoolfenden/ip/http"
-  version = "0.3.12"
+  source = "git::https://github.com/JamesWoolfenden/terraform-http-ip.git?ref=5769331633debca683a81a38470083a0abd39049"
 }
