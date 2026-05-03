@@ -19,15 +19,11 @@ module "rds" {
 data "aws_subnet_ids" "examplea" {
   vpc_id = data.aws_vpc.examplea[0].id
 }
-
 data "aws_vpcs" "examplea" {}
-
 data "aws_vpc" "examplea" {
   count = length(data.aws_vpcs.examplea.ids)
   id    = tolist(data.aws_vpcs.examplea.ids)[count.index]
 }
-
 module "data" {
-  source  = "jameswoolfenden/ip/http"
-  version = "0.3.2"
+  source = "git::https://github.com/JamesWoolfenden/terraform-http-ip.git?ref=5769331633debca683a81a38470083a0abd39049"
 }
