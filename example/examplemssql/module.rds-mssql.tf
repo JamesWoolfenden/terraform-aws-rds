@@ -1,4 +1,3 @@
-
 module "rds-mssql" {
   source       = "../../"
   allowed_cidr = ["${module.data.ip}/32"]
@@ -12,9 +11,6 @@ module "rds-mssql" {
   kms_key_arn       = aws_kms_key.example.arn
   vpc_id            = data.aws_vpc.examplea[0].id
 }
-
-
 module "data" {
-  source  = "jameswoolfenden/ip/http"
-  version = "0.3.2"
+  source = "git::https://github.com/JamesWoolfenden/terraform-http-ip.git?ref=5769331633debca683a81a38470083a0abd39049"
 }
