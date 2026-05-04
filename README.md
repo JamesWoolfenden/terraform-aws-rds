@@ -149,8 +149,13 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ec2:CreateSecurityGroup",
                 "ec2:DeleteSecurityGroup",
                 "ec2:DescribeAccountAttributes",
+                "ec2:DescribeAvailabilityZones",
+                "ec2:DescribeInternetGateways",
                 "ec2:DescribeNetworkInterfaces",
                 "ec2:DescribeSecurityGroups",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcAttribute",
+                "ec2:DescribeVpcs",
                 "ec2:RevokeSecurityGroupEgress",
                 "ec2:RevokeSecurityGroupIngress"
             ],
@@ -163,10 +168,13 @@ resource "aws_iam_policy" "terraform_pike" {
             "Effect": "Allow",
             "Action": [
                 "iam:CreatePolicy",
+                "iam:CreateServiceLinkedRole",
                 "iam:DeletePolicy",
                 "iam:GetPolicy",
                 "iam:GetPolicyVersion",
+                "iam:GetRole",
                 "iam:ListPolicyVersions",
+                "iam:ListRoles",
                 "iam:PassRole"
             ],
             "Resource": [
@@ -179,17 +187,23 @@ resource "aws_iam_policy" "terraform_pike" {
             "Action": [
                 "rds:CreateDBInstance",
                 "rds:CreateDBParameterGroup",
+                "rds:CreateDBSnapshot",
                 "rds:CreateDBSubnetGroup",
                 "rds:DeleteDBInstance",
                 "rds:DeleteDBParameterGroup",
                 "rds:DeleteDBSubnetGroup",
+                "rds:DescribeDBClusters",
+                "rds:DescribeDBEngineVersions",
+                "rds:DescribeDBInstanceAutomatedBackups",
                 "rds:DescribeDBInstances",
                 "rds:DescribeDBParameterGroups",
                 "rds:DescribeDBParameters",
                 "rds:DescribeDBSubnetGroups",
                 "rds:ListTagsForResource",
                 "rds:ModifyDBInstance",
-                "rds:ModifyDBParameterGroup"
+                "rds:ModifyDBParameterGroup",
+                "rds:ModifyDBSubnetGroup",
+                "rds:RebootDBInstance"
             ],
             "Resource": [
                 "*"
