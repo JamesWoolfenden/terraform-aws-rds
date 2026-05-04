@@ -22,7 +22,7 @@ resource "aws_db_instance" "instance" {
   monitoring_interval                   = var.monitoring_interval
   monitoring_role_arn                   = var.monitoring_role_arn
   multi_az                              = var.multi_az
-  db_name                               = var.instance["name"]
+  db_name                               = can(regex("^sqlserver", var.instance["engine"])) ? null : var.instance["name"]
   option_group_name                     = var.instance["option_group_name"]
   parameter_group_name                  = var.custom_db_group_name
   password                              = var.instance_password
