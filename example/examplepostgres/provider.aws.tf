@@ -7,6 +7,5 @@ provider "aws" {
     }
   }
 }
-
 provider "random" {
 }

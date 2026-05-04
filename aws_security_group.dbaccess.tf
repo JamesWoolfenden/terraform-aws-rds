@@ -1,5 +1,6 @@
 #tfsec:ignore:aws-ec2-no-public-egress-sgr
 resource "aws_security_group" "dbaccess" {
+  # checkov:skip=CKV_AWS_382: RDS security group requires outbound access for DB engine updates and replication
   name        = "${var.instance["name"]}-allow-db-access"
   description = "Allow inbound traffic"
   vpc_id      = var.vpc_id
