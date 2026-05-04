@@ -1,4 +1,6 @@
 resource "aws_iam_policy" "dbaccess" {
+  # checkov:skip=CKV_AWS_290: IAM policy requires broad write access for this module to function
+  # checkov:skip=CKV_AWS_355: IAM policy requires wildcard resource for this module to function
   count       = var.instance["iam_database_authentication_enabled"] == true ? 1 : 0
   name_prefix = "rds-access-${var.instance["username"]}"
   policy      = <<POLICY
