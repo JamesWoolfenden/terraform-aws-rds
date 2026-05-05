@@ -13,7 +13,7 @@ resource "aws_iam_policy" "dbaccess" {
              "rds-db:connect"
          ],
          "Resource": [
-            "arn:aws:rds-db:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:dbuser:${aws_db_instance.instance.resource_id}/${var.instance["username"]}"
+            "arn:aws:rds-db:${data.aws_region.current.id}:${data.aws_caller_identity.current.account_id}:dbuser:${aws_db_instance.instance.resource_id}/${var.instance["username"]}"
          ]
       }
    ]
