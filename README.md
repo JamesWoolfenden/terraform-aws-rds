@@ -1,13 +1,11 @@
 # terraform-aws-rds
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-rds/workflows/Verify/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-rds)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-rds/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-rds)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-rds.svg)](https://github.com/JamesWoolfenden/terraform-aws-rds/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-rds.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-rds/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-rds/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-rds&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-rds/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-rds&benchmark=INFRASTRUCTURE+SECURITY)
 
 Terraform module - creates an RDS instance. When you select tp create a Postgres DB, this module adds enables _pgaudit_, this is in line with Prowler and Bridgecrew AWS best practices.
 
@@ -63,7 +61,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
@@ -73,7 +71,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_db_instance.instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance) | resource |
 | [aws_db_parameter_group.custom](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_parameter_group) | resource |
 | [aws_db_subnet_group.access](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_subnet_group) | resource |
@@ -89,7 +87,7 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_allowed_cidr"></a> [allowed\_cidr](#input\_allowed\_cidr) | n/a | `list(string)` | n/a | yes |
 | <a name="input_apply_immediately"></a> [apply\_immediately](#input\_apply\_immediately) | Apply changes immediately | `bool` | `false` | no |
 | <a name="input_backup_retention_period"></a> [backup\_retention\_period](#input\_backup\_retention\_period) | n/a | `number` | `14` | no |
@@ -108,14 +106,14 @@ No modules.
 | <a name="input_publicly_accessible"></a> [publicly\_accessible](#input\_publicly\_accessible) | To comply with security rules CKV\_AWS\_17 this defaults to false | `bool` | `false` | no |
 | <a name="input_rds_role"></a> [rds\_role](#input\_rds\_role) | The IAM ARN of the role for RDS monitoring | `string` | `""` | no |
 | <a name="input_recovery_window_in_days"></a> [recovery\_window\_in\_days](#input\_recovery\_window\_in\_days) | The number of days for schedule of deletion of secret | `number` | `0` | no |
-| <a name="input_subnet_group"></a> [subnet\_group](#input\_subnet\_group) | n/a | `list` | <pre>[<br>  {<br>    "description": "",<br>    "name": "database-1"<br>  }<br>]</pre> | no |
+| <a name="input_subnet_group"></a> [subnet\_group](#input\_subnet\_group) | n/a | `list` | <pre>[<br/>  {<br/>    "description": "",<br/>    "name": "database-1"<br/>  }<br/>]</pre> | no |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | A list of Subnet ids | `list(any)` | n/a | yes |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | The id of the VPC for the security group and db | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_db_subnet_group"></a> [db\_subnet\_group](#output\_db\_subnet\_group) | n/a |
 | <a name="output_instance"></a> [instance](#output\_instance) | n/a |
 | <a name="output_password_location"></a> [password\_location](#output\_password\_location) | n/a |
